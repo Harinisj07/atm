@@ -2,8 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "services.js",
   "scripts": {
+    "start": "node services.js",
+    "dev": "nodemon services.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
