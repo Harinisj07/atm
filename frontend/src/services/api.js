@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API = "http://localhost:5001/api/atm";
-
+const API = `${import.meta.env.VITE_API_URL}/api/atm`;
+console.log(import.meta.env.VITE_API_URL);
 export const signup = (data) => {
   return axios.post(`${API}/signup`, data);
 };
@@ -12,7 +12,6 @@ export const login = (accountNumber, pin) => {
     pin,
   });
 };
-
 
 export const getBalance = async (accountNumber) => {
   return axios.get(`${API}/balance/${accountNumber}`);
